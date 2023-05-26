@@ -2,8 +2,8 @@ const std = @import("std");
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
-    var start: f16 = 0;
     const end = 300;
+    var start: f16 = 0;
 
     try stdout.print("{s:2}\t {s:3}\n", .{ "F", "C" });
 
