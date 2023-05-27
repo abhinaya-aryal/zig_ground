@@ -4,8 +4,10 @@ const stdout = std.io.getStdOut().writer();
 
 pub fn main() !void {
     var c = try stdin.readByte();
-    while (c != '\n') {
+    while (true) {
         try stdout.writeByte(c);
         c = try stdin.readByte();
     }
+
+    try stdout.writeByte('\n');
 }

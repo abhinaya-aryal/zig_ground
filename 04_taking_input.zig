@@ -5,8 +5,6 @@ const stdin = std.io.getStdIn().reader();
 fn take_input(buffer: []u8) !u16 {
     try stdout.print("Enter a number: ", .{});
     const input = try stdin.readUntilDelimiter(buffer, '\n');
-    const data = try stdin.readByte();
-    try stdout.print("entered byte:{c}\n", .{data});
     return std.fmt.parseInt(u16, input, 10);
 }
 

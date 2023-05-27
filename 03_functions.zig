@@ -1,13 +1,13 @@
 const std = @import("std");
 const stdout = std.io.getStdOut().writer();
 
-fn addInt(a: i32, b: i32) i32 {
+fn addInt(a: u8, b: u8) u9 {
     return a + b;
 }
 
 pub fn main() !void {
-    var a: i32 = 400000;
-    var b: i32 = 600000;
+    var a: u8 = 40;
+    var b: u8 = 60;
     var sum = addInt(a, b);
 
     try stdout.print("Sum = {d}\n", .{sum});
